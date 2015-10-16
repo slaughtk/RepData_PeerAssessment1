@@ -78,6 +78,8 @@ The 5 minute interval labeled 835 contains the max number of average daily steps
 
 ## Imputing missing values
 
+Each NA step value is replaced (in a copy of the dataset) with the mean step count value for the corresponding 5-minute interval across all days.  
+
 
 ```r
 ## Create a copy of the original dataset ordered by date and interval

@@ -121,6 +121,7 @@ vMaxStepInterval &lt;- dfOrderedMean[1, &quot;interval&quot;]</code></pre>
 </div>
 <div id="imputing-missing-values" class="section level2">
 <h2>Imputing missing values</h2>
+<p>Each NA step value is replaced (in a copy of the dataset) with the mean step count value for the corresponding 5-minute interval across all days.</p>
 <pre class="r"><code>## Create a copy of the original dataset ordered by date and interval
 dfActMonNoNAs &lt;- dfActMon[order(dfActMon$date, dfActMon$interval), ] 
 

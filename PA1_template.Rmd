@@ -75,6 +75,8 @@ The 5 minute interval labeled `r vMaxStepInterval` contains the max number of av
 
 ## Imputing missing values
 
+Each NA step value is replaced (in a copy of the dataset) with the mean step count value for the corresponding 5-minute interval across all days.  
+
 ```{r}
 ## Create a copy of the original dataset ordered by date and interval
 dfActMonNoNAs <- dfActMon[order(dfActMon$date, dfActMon$interval), ] 
